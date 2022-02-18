@@ -36,11 +36,19 @@ public class BookManagerController {
         return new ResponseEntity<>(newBook, httpHeaders, HttpStatus.CREATED);
     }
 
-    //User Story 4 - Update Book By Id Solution
+    //User Story 4 - Update Book By Id
     @PutMapping({"/{bookId}"})
     public ResponseEntity<Book> updateBookById(@PathVariable("bookId") Long bookId, @RequestBody Book book) {
         bookManagerService.updateBookById(bookId, book);
         return new ResponseEntity<>(bookManagerService.getBookById(bookId), HttpStatus.OK);
+    }
+
+    //Delete Book By Id Solution
+    @DeleteMapping({"/{bookId}"})
+    public ResponseEntity<?> deleteBookById(@PathVariable("bookId") Long bookId) {
+
+        bookManagerService.deleteBookById(bookId);
+        return new ResponseEntity<>( HttpStatus.NO_CONTENT);
     }
 
 }
