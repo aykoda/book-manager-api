@@ -1,4 +1,4 @@
-# 📖 Minimalist Book Manager API
+![image](https://user-images.githubusercontent.com/95845154/156437036-39fbae3e-de82-4a41-945e-8a49774103cd.png)
 
 ## Introduction
 This is the starter repository for the Further APIs session. It provides a start to creating a Minimalist Book Manager API
